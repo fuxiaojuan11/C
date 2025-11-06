@@ -1,0 +1,23 @@
+#include<stdio.h>
+//函数的定义
+int get_max(int x,int y)
+{
+    return( x > y ? x : y);
+
+}
+void text ()
+{
+    printf("hehe\n");
+}
+int main()
+{
+    int a = 0;
+    int b = 0;
+    scanf("%d %d",&a,&b);
+//函数的调用
+    int m = get_max(a,b);
+    text();
+    printf("%d\n",m);
+
+    return 0;
+}
