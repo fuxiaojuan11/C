@@ -1,0 +1,40 @@
+
+//素数是只能被他本身和一整除                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    //我要判断i是否是素数这个素数是100——200
+
+    int i =0 ;
+   
+    int count = 0;
+    for(i = 101;i<=200;i+=2)//偶数不可能是素数
+    {
+        int j = 0;
+        int flag = 1;
+        //如何判断这个数是不是素数  能被自己整除和1
+        //我们要把这个数字找一个字母代替 还不一定被一个数字除
+        for(j = 2;j <= sqrt(i);j++)
+        {
+            if(i % j == 0)
+            {
+                flag = 0;
+                break;
+            }
+
+
+        }
+        if(flag == 1)
+        {
+            count++;
+            printf("%d ",i);
+        }
+       
+    }
+    printf("\ncount = %d\n",count);
+    return 0;
+
+
+
+}
